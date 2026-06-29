@@ -57,7 +57,7 @@ namespace WatchmanDevotional.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Roles ="SuperAdmin")]
+        [Authorize(Roles ="SuperAdmin,Admin")]
         public async Task<IActionResult> DeleteDevotional(Guid id)
         {
             var deleted = await _service.DeleteDevotionalAsync(id);
